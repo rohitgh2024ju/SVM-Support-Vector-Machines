@@ -1,37 +1,59 @@
 # Derivation of total margin
 
-Let's say, boundary equation is:
+Let's say the boundary equation is:
+
 $$
 w^T x + b = 0
 $$
 
-one point will satisfy:
+One point will satisfy:
+
 $$
 w^T x + b = 1
 $$
 
-and the other:
+And the other:
+
 $$
 w^T x + b = -1
 $$
 
-now, $x_+ on w^T x_+ + b = 1$ and $x_- on w^T x_- + b = -1$
+Now, $x_+$ is on $w^T x_+ + b = 1$ and $x_-$ is on $w^T x_- + b = -1$.
 
-shortest distance between them is $(x_+ - x_-) = \lambda w$, where $\lambda is scalar$
+The shortest distance between them is $(x_+ - x_-) = \lambda w$, where $\lambda$ is a scalar.
 
-now $w^T (x_+ - x_-) = 2$
+Now:
 
-therefore $w^T (\lambda w) = 2$
+$$
+w^T (x_+ - x_-) = 2
+$$
+
+Therefore:
+
+$$
+w^T (\lambda w) = 2
+$$
+
 $$
 \lambda w^T w = 2
-\lambda ||w||^2 = 2
-\lambda = \frac{2}{||w||^2}
 $$
 
-now,
 $$
-||(x_+ - x_-)|| = ||\lambda w||
-||(x_+ - x_-)|| = ||\frac{2}{||w||^2}|| ||w||
+\lambda \|w\|^2 = 2
 $$
 
-Hence, $\boxed{Total Margin = \frac{2}{||w||}}$
+$$
+\lambda = \frac{2}{\|w\|^2}
+$$
+
+Now:
+
+$$
+\|(x_+ - x_-)\| = \|\lambda w\| = | \lambda | \cdot \|w\| = \left| \frac{2}{\|w\|^2} \right| \cdot \|w\|
+$$
+
+Hence, 
+
+$$
+\text{TotalMargin} = \frac{2}{\|w\|}
+$$
