@@ -11,3 +11,7 @@ Given a dataset
 $$
 D = {(x_i, y_i)}_{i=1}^n
 $$
+
+where:
+
+* $x_i\in \mathbb{R}^d$ represents a feature vector
